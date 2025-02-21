@@ -1,0 +1,768 @@
+/* General Styles */
+* {
+    margin: 5;
+    padding: 5;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #04000c; /* Dark background for a sleek and professional look */
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+    padding-top: 60px; /* Added space for fixed navbar */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: auto;
+    padding-left: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #04000c;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav items */
+    align-items: center;
+    width: 100%;
+}
+
+/* Logo */
+.logo {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-right: 50px; /* Adjust if you need some space between logo and nav */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Align nav items to the right */
+    flex: 2;
+    margin-left: auto; /* Ensure nav items are pushed to the right */
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #303031;
+}
+
+
+
+
+/* CTA Button (Book a Consultation) */
+.btn-consult {
+    background-color: #303031;
+    color: #fff;
+    display: inline-block;
+    font-size: 2vw;  /* Responsive font size */
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border-radius: 1rem;
+    max-width: 100%;  /* Prevents overflowing on small screens */
+    text-align: center;
+    word-wrap: break-word;
+}
+}
+
+.btn-consult:hover {
+    background: linear-gradient(45deg, #5a10b7, #1e5bc7);
+    transform: scale(1.05);
+}
+
+/* Hamburger Icon (for mobile) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25px;
+    width: 30px;
+}
+
+.hamburger .bar {
+    height: 4px;
+    width: 100%;
+    background-color: #fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 4px;
+    background: white;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 20px;
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.hero .overlay {
+    flex: 1;
+    text-align: left;
+}
+
+.hero .hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero .hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Hero Section Text */
+.hero h1 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background: #6a11cb;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.3s;
+}
+
+.btn:hover {
+    background: #4b0da5;
+    transform: scale(1.05);
+}
+/* Container for the company information */
+.company-info {
+    padding: 20px 20px;
+    background-color: #04000c;
+    margin-top: 20px;
+}
+
+/* Info Card styling */
+.info-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.info-card h2 {
+    font-size: 24px;
+    color: #0b0220;
+}
+
+
+/* Table styling */
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.info-table th, .info-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.info-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+
+.info-table td {
+    color: #333;
+}
+
+.info-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.info-table td:empty {
+    background-color: #f9f9f9;
+    color: #aaa;
+}
+
+
+/* About Section */
+.about {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    flex-direction: column; /* Stacks feature boxes vertically */
+    align-items: center;
+    gap: 30px;
+    padding: auto;
+    max-width: 900px; /* Limits width for a clean look */
+    margin: auto;
+}
+
+.feature {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%; /* Takes full width within max-width */
+    max-width: 800px; /* Wider box for a premium look */
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+}
+
+/* Hover Effect */
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Styling */
+.feature img {
+    width:aut0;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    border: 3px solid #f0f0f0;
+}
+
+/* Text Container */
+.feature-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Title Styling */
+.feature h4 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #6a11cb;
+}
+
+/* Description Styling */
+.feature p ,h1 {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+/* Director Section */
+.director {
+    padding: 20px 20px;
+    background-color: #04000c; /* Background color matching the body */
+}
+.director h2 {
+    text-align: center;
+}
+
+/* Table styling for Director section */
+.director-table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.director-table th, .director-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd; /* Ensure a visible border around cells */
+    color: #333; /* Set text color to dark for visibility */
+}
+
+.director-table th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+}
+
+.director-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Ensure odd and even rows have alternate background colors for better readability */
+.director-table tr:nth-child(odd) {
+    background-color: #fafafa;
+}
+
+.director-table tr:nth-child(even) {
+    background-color: #fff;
+}
+
+
+
+/* Contact Form */
+.contact-form {
+    text-align: center;
+    padding: 70px 20px;
+    background: #222;
+    border-radius: 8px;
+    margin-top: 50px;
+}
+
+.contact-form h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.contact-form form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #6a11cb;
+    outline: none;
+}
+
+.contact-form button {
+    padding: 14px 30px;
+    background: #6a11cb;
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s;
+}
+
+.contact-form button:hover {
+    background: #4b0da5;
+    transform: scale(1.05);
+}
+
+/* Contact Details Box */
+.contact-details-box {
+    padding: 10px;
+    background-color: #333;
+    margin: 40px 0;
+    
+    border-radius: 8px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-details-box-content {
+    display: flex;
+    justify-content: space-between; /* Ensure content is spaced between */
+    align-items: flex-start; /* Align items at the top */
+    gap: 30px; /* Space between the two sections */
+    background-color: #444;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-details-box h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.contact-details-box p {
+    color: #ddd;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.contact-details-box p strong {
+    color: #fff;
+}
+
+/* Contact Information */
+.contact-info {
+    flex: 1; /* Ensure it takes up the left side of the container */
+    text-align: left; /* Align text to the left */
+}
+
+/* Styling for Map container */
+.map-container {
+    text-align: right;
+    width: 100%; /* Ensure it spans the full width */
+    max-width: 1000px; /* Increase the maximum width */
+    margin-top: 0;
+    border-radius: 8px;
+}
+
+.map-container iframe {
+    border: 0;
+    width: auto;
+    height: 80; /* Increased height for better visibility */
+    border-radius: 8px;
+}
+
+
+
+/* Media Queries for Responsiveness */
+
+/* Small devices (phones) */
+@media only screen and (max-width: 600px) {
+    /* General Fixes for Mobile */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 14px;
+    width: 100vw; /* Ensure no extra width */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    padding-top: 50px; /* Ensure navbar doesn't overlap content */
+}
+
+/* Navbar */
+.navbar {
+    padding: 10px 15px;
+    width: 100%;
+}
+
+/* Logo */
+.logo {
+    font-size: 20px;
+}
+
+/* Adjusting Nav Links for Mobile */
+.nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: #04000c;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+.nav-links.active {
+    display: flex;
+    background-color: #04000c;
+}
+
+.nav-links li {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-links a {
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background: white;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.hero h1 {
+    font-size: 28px;
+}
+
+.hero p {
+    font-size: 16px;
+}
+
+.hero .hero-image {
+    width: 100%;
+    text-align: center;
+}
+
+.hero .hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove any inline spacing */
+}
+
+/* Buttons */
+.btn {
+    font-size: 14px;
+    padding: 10px 15px;
+    width: auto;
+    max-width: 100%;
+}
+
+/* Contact Form */
+.contact-form {
+    padding: 50px 15px;
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+}
+
+.contact-form button {
+    font-size: 14px;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+/* Tables */
+.info-table,
+.director-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto; /* Allow scrolling if content overflows */
+}
+
+.info-table th, .info-table td,
+.director-table th, .director-table td {
+    font-size: 14px;
+    padding: 8px;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+.features {
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature {
+    width: 90%; /* Takes most of the screen width */
+    max-width: 400px; /* Limits stretching */
+}
+
+/* Contact Details */
+.contact-details-box-content {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+/* Map */
+.map-container {
+    width: 100%;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+}
+
+
+/* Medium devices (tablets) */
+@media only screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 10px 24px;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .contact-form h2 {
+        font-size: 30px;
+    }
+
+    .contact-form form {
+        max-width: 450px;
+    }
+
+    .contact-details-box-content {
+        flex-direction: column;
+    }
+
+    .map-container {
+        width: 100%; /* Make map full width on tablets */
+        margin-top: 10px;
+    }
+}
+
+/* Large devices (desktops) */
+@media only screen and (min-width: 1024px) {
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px 20px;
+         border-radius: 25px; /* Keep rounded corners but slightly reduce */
+        margin-left: 20px;
+    }
+
+    .contact-details-box-content {
+        flex-direction: row; /* Change to row for large screens */
+        justify-content: space-between; /* Ensures space between contact info and map */
+    }
+
+    .map-container {
+        width: 100%; /* Set map container to 50% of the box for large screens */
+        margin-top: 0;
+    }
+
+    .contact-info {
+        width: 50%; /* Set the contact info container to 45% width */
+    }
+}
+/* Responsive Navigation */
+@media (max-width: 1024px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: left;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #0b0220;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .nav-links a:hover {
+        color: #303031;
+    }
+    
+
+    .nav-links.active a {
+        text-align: center;
+    }
+
+    .hamburger.active div:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.active div:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active div:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+}
